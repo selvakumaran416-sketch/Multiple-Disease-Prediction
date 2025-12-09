@@ -113,7 +113,7 @@ elif choice == "Kidney Disease":
                     value = st.number_input(f"{col}", value=0)
                     input_values[col] = value
 
-    st.markdown("</div>", unsafe_allow_html=True)
+        st.markdown("</div>", unsafe_allow_html=True)
 
     if st.button("🔍 Predict Kidney Disease", use_container_width=True):
         orders = [input_values[col] for col in features]
@@ -150,5 +150,6 @@ else:
         pred = p_model['model'].predict(arr)[0]
 
         st.success("🧠 Parkinson's Disease Detected" if pred == 1 else "🧠 No Parkinson Symptoms Found")
+
 
 
